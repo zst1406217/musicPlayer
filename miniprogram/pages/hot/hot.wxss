@@ -1,0 +1,9 @@
+/* pages/hot/hot.wxss */
+page {
+  background-color: thistle
+}
+
+.player {
+  position: fixed;
+  bottom: 0;
+}

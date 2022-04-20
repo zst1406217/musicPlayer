@@ -1,0 +1,3 @@
+<view class="broad-item" bindtap="handleHot" style="background-image: url('{{item. thumb}}');">
+  <text class="broad-text">{{item.name}}</text>
+</view>

@@ -1,0 +1,39 @@
+/* pages/user/user.wxss */
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: darkslategrey;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.container {
+  background-color: white;
+}
+
+.info {
+  margin-top: 100rpx;
+}
+
+.hyzx {
+  margin-left: 50rpx;
+}
+
+.mrqd {
+  margin-left: 50rpx;
+}
+
+.favor {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30rpx;
+}

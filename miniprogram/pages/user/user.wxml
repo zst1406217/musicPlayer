@@ -1,0 +1,37 @@
+<!--pages/user/user.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <block wx:if="{{canIUseOpenData}}">
+      <view class="userinfo-avatar">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <open-data type="userNickName"></open-data>
+    </block>
+    <block wx:elif="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
+    </block>
+  </view>
+  <view class="info">
+    <button type="default" size="mini" class="hdzx">活动中心</button>
+    <button type="default" size="mini" class="hyzx">会员中心</button>
+    <button type="default" size="mini" class="mrqd">每日签到</button>
+  </view>
+  <view class="favor">
+    <image src="../../icon/heart.png" style="width:60rpx;height: 60rpx;"></image>
+    <button type="default" style="width:500rpx" bindtap="getfavor">我的收藏</button>
+  </view>
+  <view class="favor">
+    <image src="../../icon/download.png" style="width:60rpx;height: 60rpx;"></image>
+    <button type="default" style="width:500rpx">本地歌曲</button>
+  </view>
+  <view class="favor">
+    <image src="../../icon/cd.png" style="width:60rpx;height: 60rpx;"></image>
+    <button type="default" style="width:500rpx">我的歌单</button>
+  </view>
+  <view class="favor">
+    <image src="../../icon/broadcast.png" style="width:60rpx;height: 60rpx;"></image>
+    <button type="default" style="width:500rpx">我的电台</button>
+  </view>
+</view>
